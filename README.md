@@ -6,6 +6,10 @@
   </a>
 </p>
 
+
+https://github.com/user-attachments/assets/71c82da5-091e-4f84-887b-d2a1ccb97243
+
+
 <p align="center">
   <sub>▶ Click the preview to watch the AME theme video.</sub>
 </p>
