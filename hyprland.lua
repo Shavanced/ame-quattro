@@ -52,15 +52,15 @@ hl.config({
 			new_optimizations = true,
 		},
 
-		active_opacity = 0.93,
-		inactive_opacity = 0.92,
+		active_opacity = 0.95,
+		inactive_opacity = 0.94,
 		fullscreen_opacity = 1.0,
 	},
 
 	-- Num Lock must start OFF.
-	input = {
-		numlock_by_default = false,
-	},
+	--input = {
+	--	numlock_by_default = false,
+	--},
 })
 
 -- Original Rainy animation curve:
@@ -120,3 +120,46 @@ hl.layer_rule({
 	blur = true,
 	ignore_alpha = 0.1,
 })
+
+-- AME / Custom window rules
+-- Omarchy 4 / Quattro
+-- Hyprland Lua configuration
+
+-- Gazelle WiFi TUI - floating window
+-- Uncomment if you want Gazelle to float:
+--
+-- o.window(
+--   { initial_class = "org.omarchy.Gazelle" },
+--   {
+--     float = true,
+--     center = true,
+--     size = "800 600",
+--   }
+-- )
+
+-- wlctl floating window
+--o.window(
+--  { initial_class = "org.omarchy.Wlctl" },
+--  {
+--    float = true,
+--    center = true,
+--    size = "800 600",
+--  }
+--)
+
+-- Annotate toolbar
+--o.window(
+--  { initial_title = "annotate_toolbar" },
+--  {
+--    float = true,
+--    size = "50 70",
+--  }
+--)
+
+-- Social Stream: disable Hyprland blur
+--o.window(
+--  { class = "^(socialstream)$" },
+--  {
+--    no_blur = true,
+--  }
+--)
