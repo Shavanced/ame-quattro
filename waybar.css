@@ -1,0 +1,64 @@
+/* ────────────────────────────────────────────────────────────
+   COLOR VARIABLES (Catppuccin Mocha)
+   ──────────────────────────────────────────────────────────── */
+@define-color base     #11111b;
+@define-color text     #cdd6f4;
+@define-color lavender #cba6f7;
+@define-color mauve    #cba6f7;
+
+/* ────────────────────────────────────────────────────────────
+   MAIN WINDOW
+   ──────────────────────────────────────────────────────────── */
+window#waybar {
+    background-color: @base;
+    border: none;
+    box-shadow: none;
+}
+
+/* ← THIS draws the full bottom border line */
+/* ────────────────────────────────────────────────────────────
+   WORKSPACES
+   ──────────────────────────────────────────────────────────── */
+#workspaces button,
+#workspaces button.persistent,
+#workspaces button.hidden,
+#workspaces button.empty {
+    color: @text;
+    padding: 0 8px;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
+    background: linear-gradient(to top, rgba(203, 166, 247, 0.15), transparent);
+}
+
+/* ────────────────────────────────────────────────────────────
+   MODULE SPACING
+   ──────────────────────────────────────────────────────────── */
+#pulseaudio,
+#network,
+#cpu,
+#battery,
+#bluetooth,
+#clock {
+    color: @text;
+  }
+label {
+    color: @text;
+}
+
+/* ────────────────────────────────────────────────────────────
+   TOOLTIPS
+   ──────────────────────────────────────────────────────────── */
+tooltip {
+    background: @base;
+    border: 2px solid @mauve;
+    border-radius: 7px;
+}
+
+tooltip label {
+    color: @text;
+}

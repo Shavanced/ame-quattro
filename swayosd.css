@@ -1,0 +1,52 @@
+@define-color background-color #000000;
+@define-color border-color     #434343;
+@define-color label            aliceblue;
+@define-color image            aliceblue;
+@define-color progress         aliceblue;
+
+window {
+    background-color: transparent;
+    border: none;
+    border-radius: 999px;
+    padding: 0;
+    box-shadow: none;
+}
+
+.osd, 
+osd,
+osd {
+    background-color: alpha(@background-color, 0.4);
+    border: 1px solid @border-color;
+    border-radius: 9999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+image {
+    color: @image;
+    -gtk-icon-size: 0px;
+    margin: 0 16px 0 0;
+}
+
+label {
+    color: @label;
+    font-size: 8px;
+    font-weight: 400;
+    margin: 0;
+}
+
+progressbar {
+    border-radius: 999px;
+    padding-bottom:8px;
+    margin: 8px 0 0 0;
+    min-height: 5px;
+    min-width: 200px;
+}
+
+progressbar trough {
+    background: alpha(@border-color, 0.15);
+    border-radius: 999px;
+    border: none;
+    min-height: 5px;
+}
+
+

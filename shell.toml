@@ -1,0 +1,178 @@
+# ────────────────────────────────────────────────────────────
+# Rainy Theme — Omarchy 4 / Quickshell
+#
+# Restores the visual language of the old Rainy theme:
+#   - Catppuccin Mocha dark surfaces
+#   - lavender #cba6f7 accent
+#   - compact 10px-ish typography
+#   - translucent shell surfaces
+#   - dark translucent launcher/menu
+#   - lavender selected states
+#
+# IMPORTANT:
+# The actual background blur is implemented in hyprland.lua.
+# shell.toml controls the translucent surface; Hyprland's
+# layer rule performs the compositor blur behind it.
+# ────────────────────────────────────────────────────────────
+
+[bar]
+background       = "#11111b"
+background-alpha = 0.92
+text             = "#cdd6f4"
+active           = "#cba6f7"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
+
+[hyprland]
+active-border            = "#cba6f7"
+active-border-foreground = "#cdd6f4"
+
+[controls]
+normal-color        = "#cdd6f4"
+normal-fill-alpha   = 0.04
+normal-border       = "#434343"
+normal-border-width = 1
+normal-border-alpha = 0.45
+
+hover-cursor-color        = "#cba6f7"
+hover-cursor-fill-alpha   = 0.10
+hover-cursor-border       = "#cba6f7"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.45
+
+focus-color        = "#cba6f7"
+focus-fill-alpha   = 0.10
+focus-border       = "#cba6f7"
+focus-border-width = 1
+focus-border-alpha = 0.45
+
+selected-color        = "#cdd6f4"
+selected-fill-alpha   = 0.16
+selected-border       = "#cba6f7"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.30
+
+[spacing]
+# Slightly tighter than Quattro's default, matching the old
+# compact Waybar/Walker/Mako layout.
+#scale = 0.95
+scale-with-font = true
+
+control-gap     = 6
+control-padding-x = 8
+control-padding-y = 5
+input-padding-y = 6
+control-height  = 28
+popup-row-height = 28
+row-gap         = 6
+row-padding-x   = 10
+label-gap       = 4
+panel-gap       = 12
+panel-padding   = 12
+popup-padding   = 10
+
+[font]
+# Your old Mako configuration used Space Grotesk 10px.
+# Omarchy 4 controls the actual family globally; base-size keeps
+# the Quickshell type scale compact.
+base-size = 10
+
+[popups]
+# Old Mako/SwayOSD aesthetic: dark and translucent.
+background       = "#11111b"
+background-alpha = 0.92
+text             = "#cdd6f4"
+border           = "#434343"
+border-alpha     = 0.95
+border-width     = 1
+
+[tooltip]
+background       = "#11111b"
+background-alpha = 0.92
+text             = "#cdd6f4"
+border           = "#cba6f7"
+border-alpha     = 0.90
+border-width     = 1
+
+[notifications]
+# Uses the theme's shared base surface color (#11111b, same as [bar]
+# and [popups]) at ~80% opacity, rather than Mako's old #1a1a1a.
+background       = "#11111b"
+background-alpha = 0.92
+text             = "#ffffff"
+border           = "#434343"
+border-alpha     = 1.0
+border-width     = 2
+countdown        = "#cba6f7"
+
+[launcher]
+# Old Walker: #13141acc ≈ 80% opacity.
+background                = "#13141a"
+background-alpha          = 0.92
+text                      = "#cdd3e1"
+border                    = "#292b3b"
+border-alpha              = 1.0
+selected-background       = "#cba6f7"
+selected-background-alpha = 0.16
+selected-text             = "#e8dcfb"
+selected-border           = "#cba6f7"
+selected-border-alpha     = 0.25
+scrim                     = "#11111b"
+scrim-alpha               = 0.35
+
+[menu]
+# Quattro's unified Omarchy menu replaces Walker/Wofi.
+background                = "#13141a"
+background-alpha          = 0.92
+text                      = "#cdd3e1"
+border                    = "#292b3b"
+border-alpha              = 1.0
+selected-background       = "#cba6f7"
+selected-background-alpha = 0.16
+selected-text             = "#e8dcfb"
+selected-border           = "#cba6f7"
+selected-border-alpha     = 0.25
+scrim                     = "#11111b"
+scrim-alpha               = 0.35
+
+[polkit]
+background       = "#1e1e2e"
+background-alpha = 0.92
+text             = "#cdd6f4"
+text-error       = "#f38ba8"
+border           = "#cba6f7"
+border-error     = "#f38ba8"
+border-alpha     = 1.0
+scrim            = "#11111b"
+scrim-alpha      = 0.35
+accent           = "#cba6f7"
+
+[lock]
+# Old hyprlock:
+# inner_color = rgba(30,30,46,0.66)
+# outer_color = rgba(203,166,247,1)
+# font_color  = rgba(205,214,244,1)
+background       = "#1e1e2e"
+background-alpha = 0.66
+text             = "#cdd6f4"
+placeholder      = "#cdd6f4"
+text-error       = "#f38ba8"
+border           = "#cba6f7"
+border-active    = "#cba6f7"
+border-error     = "#f38ba8"
+border-alpha     = 1.0
+selection        = "#cba6f7"
+selection-alpha  = 0.45
+
+[image-picker]
+scrim                   = "#11111b"
+scrim-alpha             = 0.35
+text                    = "#cdd6f4"
+selected-border         = "#cba6f7"
+selected-border-alpha   = 1.0
+unselected-border       = "#cdd6f4"
+unselected-border-alpha = 0.28
